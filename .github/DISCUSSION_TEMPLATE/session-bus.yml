@@ -1,0 +1,23 @@
+title: "[bus] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Handoff notes and status between sessions. Public — keep it client-neutral.
+  - type: input
+    id: from
+    attributes:
+      label: From (session or system)
+    validations:
+      required: true
+  - type: input
+    id: to
+    attributes:
+      label: To (session, system, or "any")
+  - type: textarea
+    id: message
+    attributes:
+      label: Message
+      description: What happened, what's next, related issues (#123) and specs.
+    validations:
+      required: true

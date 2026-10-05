@@ -1,0 +1,14 @@
+title: "[lesson] "
+body:
+  - type: textarea
+    id: lesson
+    attributes:
+      label: What we learned
+      description: Generalized and public-safe — no client details.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Where it came from
+      description: Related issues, PRs, or specs in this repo.
