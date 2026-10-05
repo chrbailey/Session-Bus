@@ -1,0 +1,33 @@
+name: Build (Software on Demand)
+description: Build software from a spec in specs/
+labels: ["type:build"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Public repository — no client names, private links, real data, or secrets.
+        Agents only pick this up after a maintainer adds the `bus:ready` label.
+  - type: input
+    id: spec
+    attributes:
+      label: Spec file
+      placeholder: specs/lease-renewal-reminders.md
+    validations:
+      required: true
+  - type: input
+    id: stack
+    attributes:
+      label: Preferred stack (optional)
+      placeholder: e.g. Python 3.12 CLI, TypeScript + Node, static web page
+  - type: textarea
+    id: notes
+    attributes:
+      label: Extra instructions
+      description: Anything not in the spec — scope limits, deadlines, integration notes.
+  - type: checkboxes
+    id: publishing
+    attributes:
+      label: Publishing check
+      options:
+        - label: The spec and this issue contain no client names, private links, real data, or secrets.
+          required: true

@@ -1,0 +1,35 @@
+name: Task
+description: A unit of work for an agent or a person
+labels: ["type:task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Public repository — no client names, private links, real data, or secrets.
+        Agents only pick this up after a maintainer adds the `bus:ready` label.
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should be true when this is done?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Background, links to specs or discussions in this repo.
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+      description: How the result will be checked.
+    validations:
+      required: true
+  - type: checkboxes
+    id: publishing
+    attributes:
+      label: Publishing check
+      options:
+        - label: This issue contains no client names, private links, real data, or secrets.
+          required: true

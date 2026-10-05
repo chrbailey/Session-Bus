@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ideas and questions
+    url: https://github.com/chrbailey/Session-Bus/discussions
+    about: Start in Discussions; approved work becomes an issue.
